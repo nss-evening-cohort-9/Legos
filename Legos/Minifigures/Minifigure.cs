@@ -4,21 +4,24 @@ namespace Legos.Minifigures
 {
     class Minifigure
     {
-        public Head Head { get; }
+        readonly Head _head;
+        readonly Torso _torso;
+        readonly Legs _legs;
 
-        public Torso Torso { get; }
-
-        public Minifigure(Head head, Torso torso)
+        public Minifigure(Head head, Torso torso, Legs legs)
         {
-            Head = head;
-            Torso = torso;
+            _head = head;
+            _torso = torso;
+            _legs = legs;
         }
 
         public void Battle()
         {
-            Head.Talk();
-            Torso.Flex();
-            Torso.Fight();
+            _legs.Walk();
+            _head.Talk();
+            _torso.Flex();
+            _torso.Fight();
+            _legs.Kick();
         }
 
     }
