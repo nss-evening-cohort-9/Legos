@@ -11,7 +11,8 @@ namespace Legos.Minifigures.Parts
         public string Shirt { get; set; }
         public int NumberOfArms { get; set; }
 
-
+        public abstract void Flex();
+        public abstract void Fight();
 
     }
 }
